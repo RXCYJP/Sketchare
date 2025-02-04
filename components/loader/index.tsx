@@ -1,4 +1,5 @@
 "use client";
+
 export default function Loader() {
   return (
     <div className="flex flex-row gap-2">

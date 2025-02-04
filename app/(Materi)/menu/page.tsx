@@ -11,7 +11,7 @@ export default function MenuPage() {
         <Link href="/pengertian">
           <Button
             type="button"
-            className="p-2 text-2xl bg-choco text-brule mt-5 rounded-lg p-2"
+            className=" text-2xl bg-choco text-brule mt-5 rounded-lg p-2"
           >
             Siklus Batuan
           </Button>
@@ -19,7 +19,7 @@ export default function MenuPage() {
         <Link href="/jenis-batuan">
           <Button
             type="button"
-            className="p-2 text-2xl bg-choco text-brule mt-5 rounded-lg p-2"
+            className=" text-2xl bg-choco text-brule mt-5 rounded-lg p-2"
           >
             Jenis-jenis Batuan
           </Button>

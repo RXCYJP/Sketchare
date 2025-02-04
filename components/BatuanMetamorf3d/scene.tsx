@@ -8,6 +8,7 @@ import { OrbitControls } from "@react-three/drei";
 import Swal from "sweetalert2";
 import { Calcarenite, Marble } from "../Model";
 import { Gneiss, Marmer, Phyllite } from "./model";
+import LoaderModel from "../modelLoader";
 
 // function Loader() {
 //   const { progress, active } = useProgress();
@@ -30,7 +31,7 @@ export default function SceneBatuanMetamorf() {
       <h1 className="text-center text-choco text-xl">Phyllite</h1>
       <Canvas gl={{ antialias: true }} dpr={[1, 1.5]} className=" p-10">
         <directionalLight position={[-5, -5, 5]} intensity={4} />
-        <Suspense fallback={null}>
+        <Suspense fallback={<LoaderModel />}>
           <OrbitControls />
           {/* <ScrollControls damping={0.5} pages={3}>   */}
           {/* <Model /> */}
@@ -41,7 +42,7 @@ export default function SceneBatuanMetamorf() {
       <h1 className="text-center text-choco text-xl">Gneiss</h1>
       <Canvas gl={{ antialias: true }} dpr={[1, 1.5]} className="">
         <directionalLight position={[-5, -5, 5]} intensity={4} />
-        <Suspense fallback={null}>
+        <Suspense fallback={<LoaderModel />}>
           <OrbitControls />
           {/* <ScrollControls damping={0.5} pages={3}>   */}
           {/* <Model /> */}
@@ -53,7 +54,7 @@ export default function SceneBatuanMetamorf() {
       <h1 className="text-center text-choco text-xl">Marmer</h1>
       <Canvas gl={{ antialias: true }} dpr={[1, 1.5]} className="">
         <directionalLight position={[-5, -5, 5]} intensity={4} />
-        <Suspense fallback={null}>
+        <Suspense fallback={<LoaderModel />}>
           <OrbitControls />
           {/* <ScrollControls damping={0.5} pages={3}>   */}
           {/* <Model /> */}

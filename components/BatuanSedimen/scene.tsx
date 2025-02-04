@@ -16,6 +16,7 @@ import {
   Karbonat,
   Magnesit,
 } from "./model";
+import LoaderModel from "../modelLoader";
 
 // function Loader() {
 //   const { progress, active } = useProgress();
@@ -38,7 +39,7 @@ export default function SceneBatuanSedimen() {
       <h1 className="text-center text-choco text-xl">Breksi</h1>
       <Canvas gl={{ antialias: true }} dpr={[1, 1.5]} className=" p-10">
         <directionalLight position={[-5, -5, 5]} intensity={4} />
-        <Suspense fallback={null}>
+        <Suspense fallback={<LoaderModel />}>
           <OrbitControls />
           {/* <ScrollControls damping={0.5} pages={3}>   */}
           {/* <Model /> */}
@@ -49,7 +50,7 @@ export default function SceneBatuanSedimen() {
       <h1 className="text-center text-choco text-xl">Batubara</h1>
       <Canvas gl={{ antialias: true }} dpr={[1, 1.5]} className="">
         <directionalLight position={[-5, -5, 5]} intensity={4} />
-        <Suspense fallback={null}>
+        <Suspense fallback={<LoaderModel />}>
           <OrbitControls />
           {/* <ScrollControls damping={0.5} pages={3}>   */}
           {/* <Model /> */}
@@ -62,7 +63,7 @@ export default function SceneBatuanSedimen() {
       <h1 className="text-center text-choco text-xl">Batu Pasir</h1>
       <Canvas gl={{ antialias: true }} dpr={[1, 1.5]} className="">
         <directionalLight position={[-5, -5, 5]} intensity={4} />
-        <Suspense fallback={null}>
+        <Suspense fallback={<LoaderModel />}>
           <OrbitControls />
           {/* <ScrollControls damping={0.5} pages={3}>   */}
           {/* <Model /> */}
@@ -75,7 +76,7 @@ export default function SceneBatuanSedimen() {
       <h1 className="text-center text-choco text-xl">Batu Pasir Kwarsa</h1>
       <Canvas gl={{ antialias: true }} dpr={[1, 1.5]} className="">
         <directionalLight position={[-5, 5, 5]} intensity={1} />
-        <Suspense fallback={null}>
+        <Suspense fallback={<LoaderModel />}>
           <OrbitControls />
           {/* <ScrollControls damping={0.5} pages={3}>   */}
           {/* <Model /> */}
@@ -88,7 +89,7 @@ export default function SceneBatuanSedimen() {
       <h1 className="text-center text-choco text-xl">Karbonat</h1>
       <Canvas gl={{ antialias: true }} dpr={[1, 1.5]} className="">
         <directionalLight position={[-5, 5, 5]} intensity={4} />
-        <Suspense fallback={null}>
+        <Suspense fallback={<LoaderModel />}>
           <OrbitControls />
           {/* <ScrollControls damping={0.5} pages={3}>   */}
           {/* <Model /> */}
@@ -101,7 +102,7 @@ export default function SceneBatuanSedimen() {
       <h1 className="text-center text-choco text-xl">Aragonite</h1>
       <Canvas gl={{ antialias: true }} dpr={[1, 1.5]} className="">
         <directionalLight position={[-5, -5, 5]} intensity={4} />
-        <Suspense fallback={null}>
+        <Suspense fallback={<LoaderModel />}>
           <OrbitControls />
           {/* <ScrollControls damping={0.5} pages={3}>   */}
           {/* <Model /> */}
@@ -114,7 +115,7 @@ export default function SceneBatuanSedimen() {
       <h1 className="text-center text-choco text-xl">Calcite</h1>
       <Canvas gl={{ antialias: true }} dpr={[1, 1.5]} className="">
         <directionalLight position={[-5, -5, 5]} intensity={1} />
-        <Suspense fallback={null}>
+        <Suspense fallback={<LoaderModel />}>
           <OrbitControls />
           {/* <ScrollControls damping={0.5} pages={3}>   */}
           {/* <Model /> */}
@@ -127,7 +128,7 @@ export default function SceneBatuanSedimen() {
       <h1 className="text-center text-choco text-xl">Dolomit</h1>
       <Canvas gl={{ antialias: true }} dpr={[1, 1.5]} className="">
         <directionalLight position={[-5, -5, 5]} intensity={4} />
-        <Suspense fallback={null}>
+        <Suspense fallback={<LoaderModel />}>
           <OrbitControls />
           {/* <ScrollControls damping={0.5} pages={3}>   */}
           {/* <Model /> */}
@@ -140,7 +141,7 @@ export default function SceneBatuanSedimen() {
       <h1 className="text-center text-choco text-xl">Magnesit</h1>
       <Canvas gl={{ antialias: true }} dpr={[1, 1.5]} className="">
         <directionalLight position={[-5, -5, 5]} intensity={1} />
-        <Suspense fallback={null}>
+        <Suspense fallback={<LoaderModel />}>
           <OrbitControls />
           {/* <ScrollControls damping={0.5} pages={3}>   */}
           {/* <Model /> */}
