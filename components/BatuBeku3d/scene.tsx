@@ -30,7 +30,7 @@ export default function SceneBatuanBeku() {
     <div className="w-full h-full p-10 flex flex-wrap gap-10 flex-col justify-center">
       <div>
         <h1 className="text-center text-choco text-xl">Granit</h1>
-        <Canvas gl={{ antialias: true }} dpr={[1, 1.5]} className=" p-10">
+        <Canvas gl={{ antialias: true }} dpr={[1, 1.5]} className="">
           <directionalLight position={[-5, -5, 5]} intensity={4} />
           <Suspense fallback={<LoaderModel />}>
             <OrbitControls />
