@@ -36,7 +36,7 @@ export default function TujuanPage() {
               <li>
                 <p>
                   Setelah berhasil login, pengguna akan disambut dengan tampilan
-                  selamat datang yang memberikan gambaran awawl tentang media
+                  selamat datang yang memberikan gambaran awal tentang media
                   pembelajaran ini
                 </p>
               </li>
@@ -121,7 +121,7 @@ export default function TujuanPage() {
               </li>
               <li>
                 Setelah menyelesaikan <span className="italic">Quiz</span>,
-                pengguna dapat melihat hasil skor untuk evaluasi pembelajran.
+                pengguna dapat melihat hasil skor untuk evaluasi pembelajaran.
               </li>
             </ul>
           </li>

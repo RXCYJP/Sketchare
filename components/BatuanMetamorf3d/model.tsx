@@ -100,3 +100,69 @@ export function Marmer() {
     </group>
   );
 }
+export function Kuarsit() {
+  const group = useRef<Group>(null);
+  const { scene } = useGLTF("/batu/quartzite_rock.glb");
+  function handleClick() {
+    Swal.fire({
+      title: "Kuarsit",
+      icon: "info",
+      text: "Kuarsit adalah batuan yang dihasilkan ketika butiran kuarsa dalam batu pasir dilas bersama saat batu tersebut terkena suhu tinggi. Hal ini membuatnya sulit untuk dipatahkan di sepanjang batas butir seperti halnya melalui butiran. Oleh karena itu, kuarsit, yang sekeras kristal kuarsa tunggal, sulit untuk dihancurkan atau dipatahkan. Kuarsit adalah batuan yang paling tahan lama yang umum digunakan untuk konstruksi, baik karena kekerasannya maupun karena kuarsa tidak rentan terhadap pelapukan kimiawi (H Carlson et al., 2011).",
+      showConfirmButton: true,
+    });
+  }
+  return (
+    <group
+      ref={group}
+      scale={0.1}
+      rotation={[-Math.PI / 2, 0, 0]}
+      onClick={handleClick}
+    >
+      <primitive object={scene} orbitControls />;
+    </group>
+  );
+}
+export function Hornsfell() {
+  const group = useRef<Group>(null);
+  const { scene } = useGLTF("/batu/hornfels.glb");
+  function handleClick() {
+    Swal.fire({
+      title: "Hornsfell",
+      icon: "info",
+      text: "Hornfels adalah batuan metamorfisme berbutir sangat halus, tidak terkelupas, yang batuan induknya adalah serpih atau basal. Jika terbentuk dari serpih, secara karakteristik hanya mikroskopis terlihat mikroskopis dari mineral lempung serpih. Beberapa mineral tumbuh cukup besar untuk dilihat dengan mata telanjang; ini adalah mineral yang secara khusus mampu mengkristal di bawah suhu tertentu yang dicapai selama metamorfisme. Jika serpih tanduk terbentuk dari basalt, amfibol, dan bukan mika, adalah mineral berbutir halus yang paling dominan yang dihasilkan (H Carlson et al., 2011).",
+      showConfirmButton: true,
+    });
+  }
+  return (
+    <group
+      ref={group}
+      scale={0.1}
+      rotation={[-Math.PI / 2, 0, 0]}
+      onClick={handleClick}
+    >
+      <primitive object={scene} orbitControls />;
+    </group>
+  );
+}
+export function BatuTulis() {
+  const group = useRef<Group>(null);
+  const { scene } = useGLTF("/batu/slate.glb");
+  function handleClick() {
+    Swal.fire({
+      title: "Batu Tulis",
+      icon: "info",
+      text: "Batu tulis (Slate) adalah batuan berbutir sangat halus yang mudah terbelah di sepanjang bidang datar dan sejajar. Meskipun beberapa batu tulis terbentuk dari abu vulkanik, batuan induk yang umum adalah serpih. Batu tulis berkembang di bawah suhu dan tekanan yang hanya sedikit lebih besar daripada yang ditemukan di alam sedimen.  Temperaturnya tidak cukup tinggi bagi batuan untuk mengkristal kembali secara menyeluruh. Faktor pengendali yang penting adalah tekanan diferensial. Mineral lempung asli sebagian direkristalisasi menjadi mineral lempung yang berbutir halus dan sama. Di bawah tekanan diferensial, mineral platy yang lama dan yang baru akan sejajar, menciptakan belahan batu tulis di dalam batuan. Batu tulis menunjukkan bahwa batuan yang relatif dingin dan rapuh telah mengalami aktivitas tektonik yang intens. Karena kemudahannya untuk dibelah menjadi lembaran tipis dan rata, batu tulis digunakan untuk membuat papan tulis, meja biliar, dan atap.",
+      showConfirmButton: true,
+    });
+  }
+  return (
+    <group
+      ref={group}
+      scale={0.5}
+      rotation={[-Math.PI / 2, 0, 0]}
+      onClick={handleClick}
+    >
+      <primitive object={scene} orbitControls />;
+    </group>
+  );
+}

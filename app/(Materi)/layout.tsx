@@ -1,14 +1,22 @@
 "use client";
-import Link from "next/link";
+import Button from "@/components/button";
 import { useRouter } from "next/navigation";
-import { MdArrowBackIosNew } from "react-icons/md";
+import { FaBackward } from "react-icons/fa";
+import { IoMdArrowRoundBack } from "react-icons/io";
 
-export default function MateriLayout({ children }: any) {
+export default function MateriLayout(params: { children: any }) {
   const router = useRouter();
-  console.log(router);
   return (
     <div>
-      <div>{children}</div>
+      <Button
+        type="button"
+        onClick={() => router.back()}
+        className="md:hidden text-4xl
+        l z-50 top-5 left-5 fixed text-choco"
+      >
+        <IoMdArrowRoundBack />
+      </Button>
+      <div>{params.children}</div>
     </div>
   );
 }

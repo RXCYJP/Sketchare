@@ -2,9 +2,11 @@
 import profileData from "@/data/profile";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Profile(params: any) {
   const { data: session, status }: any = useSession();
+  const [isLoading, setIsLoading] = useState(true);
 
   const data = profileData;
 
@@ -12,11 +14,6 @@ export default function Profile(params: any) {
     <div className="py-10">
       <div>
         <h1 className="text-2xl font-bold text-center text-choco">Profile</h1>
-      </div>
-
-      <div>
-        {/* <h1>{session?.user?.username || session?.user?.name}</h1> */}
-        {/* <h1>{session?.user?.kelas}</h1> */}
       </div>
 
       <div className="flex items-center flex-wrap gap-11 justify-center pt-10">
@@ -27,6 +24,7 @@ export default function Profile(params: any) {
               alt={item.name}
               width={100}
               height={100}
+              onLoad={() => setIsLoading(false)}
               className=" object-cover "
             />
             <h1 className="text-xl">{item.name}</h1>

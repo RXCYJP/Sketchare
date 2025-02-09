@@ -10,7 +10,6 @@ export default function Home() {
   const session: any = useSession();
   const [isLoading, setIsLoading] = useState(true);
   const { push } = useRouter();
-  console.log(session);
   if (session.status === "loading") {
     return (
       <div className="flex items-center justify-center h-screen">

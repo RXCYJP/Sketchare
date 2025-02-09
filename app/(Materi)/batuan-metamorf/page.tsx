@@ -1,58 +1,78 @@
 "use client";
 import SceneBatuanMetamorf from "@/components/BatuanMetamorf3d/scene";
-import Link from "next/link";
-import { MdArrowBackIosNew } from "react-icons/md";
+import Button from "@/components/button";
+
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function BatuanMetamorfPage() {
+  const data = [
+    "marmer",
+    "kuarsit",
+    "hornsfell",
+    "phyllite",
+    "gneiss",
+    "batutulis",
+  ];
+  const router = useRouter();
   return (
-    <div>
+    <div className="my-5 py-10">
       <div>
         <div>
-          <Link href="/jenis-batuan" className="text-3xl">
-            <MdArrowBackIosNew />
-          </Link>
           <h2 className="text-2xl font-bold">
-            Batuan <span className="italic">Metamorf</span>
+            Batuan Metamorfisme
+            <span className="italic">(Metamorphic Rock)</span>
           </h2>
         </div>
         <div>
           <p className="text-justify">
-            Batuan malihan <span className="italic">(Metamorf)</span> adalah
-            batuan hasil dari perubahan batuan asal (batuan beku dan batuan
-            endapan (sedimen)) akibat proses metamorfosis. Metamorfosis
-            merupakan suatu proses yang dialami batuan asal akibat dari adanya
-            tekanan atau temperatur yang meningkat dan temperatur yang sama-sama
-            meningkat. Adapun Klasifikasi batuan metamorf berdasarkan teksturnya
-            yaitu sebagai berikut:
+            Batuan Metamorfisme adalah batuan hasil dari perubahan batuan asal
+            (batuan beku dan batuan sedimen) terjadi akibat proses metamorfosis.
+            Metamorfosis merupakan suatu proses yang dialami batuan asal akibat
+            dari adanya tekanan atau temperatur yang meningkat dan temperatur
+            yang sama-sama meningkat. Adapun Klasifikasi batuan metamorf
+            berdasarkan teksturnya yaitu sebagai berikut:
           </p>
           <ul className="list-decimal">
             <li>
-              <span className="font-bold">Metamorfisme Kontak</span>{" "}
-              ;Metamorfisme kontak adalah di mana suhu tinggi merupakan faktor
-              utama. Tekanan pembatas dapat memengaruhi mineral baru yang
-              mengkristal; namun, tekanan pembatas biasanya relatif rendah. Hal
-              ini dikarenakan metamorfisme kontak sebagian besar terjadi tidak
-              terlalu jauh di bawah permukaan bumi (kurang dari 10 kilometer).
-              Metamorfisme kontak terjadi berdekatan dengan pluton ketika sebuah
-              tubuh magma menyusup ke dalam batuan yang relatif dingin (H
-              Carlson et al., 2011).
+              <span className="font-bold">batuan tidak terkelupas</span> <br />
+              <div className="flex flex-wrap gap-5 mt-5 items-center justify-center">
+                {data.slice(0, 3).map((item, index) => (
+                  <Button
+                    key={index}
+                    type="button"
+                    className="text-2xl p-2 bg-choco text-brule rounded-md capitalize w-[200px]"
+                    onClick={() => router.push(`/batuan-metamorf/${item}`)}
+                  >
+                    {item}
+                  </Button>
+                ))}
+              </div>
             </li>
             <li>
-              <span className="font-bold">Metamorfisme Regional</span> ;
-              Metamorfisme Regional yaitu metamorfisme yang terjadi pada
-              kedalaman yang cukup dalam di bawah tanah (umumnya lebih dari 5
-              kilometer). Batuan metamorf regional mengindikasikan adanya
-              tekanan diferensial selama rekristalisasi (karena alasan ini,
-              metamorfisme regional kadang-kadang disebut sebagai metamorfisme
-              dinamotermal). Batuan metamorf lazim ditemukan di bagian
-              pegunungan yang mengalami perubahan bentuk paling parah. Batuan
-              ini dapat dilihat di mana inti pegunungan yang dulunya terkubur
-              dalam-dalam terbuka oleh erosi (H Carlson et al., 2011).
+              <span className="font-bold">batuan bergelombang</span> <br />
+              <div className="flex flex-wrap gap-5 mt-5 items-center justify-center">
+                {data.slice(3, 7).map((item, index) => (
+                  <Button
+                    key={index}
+                    type="button"
+                    className="text-2xl p-2 bg-choco text-brule rounded-md capitalize w-[200px]"
+                    onClick={() => router.push(`/batuan-metamorf/${item}`)}
+                  >
+                    {item}
+                  </Button>
+                ))}
+              </div>
             </li>
           </ul>
         </div>
-        <div>
-          <SceneBatuanMetamorf />
+        <div className=" bg-choco p-3 rounded-md text-brule flex flex-wrap gap-5 mt-5 items-center justify-center">
+          <h3 className="font-bold">Fakta Menarik</h3>
+          <p>
+            Tahukah kamu Batu Permata Berasal dari Proses Metamorfisme –
+            Beberapa batu permata seperti safir dan rubi terbentuk akibat proses
+            metamorfisme yang mengubah mineral menjadi bentuk kristal yang indah
+          </p>
         </div>
       </div>
     </div>

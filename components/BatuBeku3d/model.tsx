@@ -1,16 +1,10 @@
 import { useAnimations, useGLTF, useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import Swal from "sweetalert2";
 import { Group } from "three";
 
 useGLTF.preload("/robot_playground.glb");
-useGLTF.preload("/batu/granit_rock_wall.glb");
-useGLTF.preload("/batu/rhyolite_a_fiammes.glb");
-useGLTF.preload("/batu/basalt_usa.glb");
-useGLTF.preload("/batu/hornblende_diorite_italy.glb");
-useGLTF.preload("/batu/piece_of_andesite.glb");
-useGLTF.preload("/batu/gabro.glb");
 
 export function Model() {
   const group = useRef<Group>(null);

@@ -27,10 +27,10 @@ function Modals() {
 
 export default function SceneBatuanBeku() {
   return (
-    <div className="w-full h-full p-10 flex flex-wrap gap-10 flex-col justify-center">
+    <div className="w-full h-full py-10 flex flex-col flex-wrap gap-5 justify-center">
       <div>
         <h1 className="text-center text-choco text-xl">Granit</h1>
-        <Canvas gl={{ antialias: true }} dpr={[1, 1.5]} className="">
+        <Canvas gl={{ antialias: true }} dpr={[1, 1.5]} className="w-[400px]">
           <directionalLight position={[-5, -5, 5]} intensity={4} />
           <Suspense fallback={<LoaderModel />}>
             <OrbitControls />

@@ -28,7 +28,6 @@ export default function Navbar() {
     };
   });
 
-  console.log(session);
   return (
     <div>
       <div

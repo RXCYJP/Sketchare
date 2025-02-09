@@ -9,32 +9,36 @@ import RockCycleScene from "@/components/siklusBatuan3d/Scene";
 export default function PengertianPage() {
   return (
     <div>
-      <div>
+      <div className="pb-10">
         <div className=" flex gap-5 pt-5">
-          <Link href="/menu" className="text-3xl">
-            <MdArrowBackIosNew />
-          </Link>
           <h1 className="font-bold"> A. Siklus batuan</h1>
         </div>
         <div className="md:mt-5 text-justify">
           <p>
-            Siklus batuan merupakan proses perputaran terbentuknya batuan yang
-            berawal dari magma yang membeku sehingga menjadi batuan beku
-            kemudian akibat adanya pengaruh cuaca menjadi batuan sedimen. Batuan
-            sedimen yang mengalami tekanan dan suhu yang tinggi di bawah
-            permukaan bumi akan menjadi batuan metamorf. Setelah menjadi batuan
-            metamorf siklusnya akan kembali lagi menjadi magma. Proses yang
-            berulang tersebut terjadi dalam waktu hingga jutaan tahun{" "}
+            Siklus batuan <span className="italic">(Rock Cycle)</span> merupakan
+            proses perputaran terbentuknya batuan yang berawal dari magma yang
+            membeku sehingga menjadi batuan beku
+            <span className="italic">Igneous Rock</span> kemudian akibat adanya
+            pengaruh cuaca menjadi batuan sedimen. Batuan sedimen yang mengalami
+            tekanan dan suhu yang tinggi di bawah permukaan bumi akan menjadi
+            batuan metamorf <span className="italic">Metamorphic Rock</span>.
+            Setelah menjadi batuan metamorf siklusnya akan kembali lagi menjadi
+            magma. Proses yang berulang tersebut terjadi dalam waktu hingga
+            jutaan tahun
             <span className="italic font-bold">(Oktafiana et al., 2023).</span>
           </p>
         </div>
         <div>
           <RockCycleScene />
         </div>
+
         <div className="md:mt-5 text-justify">
           <ul className="list-decimal li">
             <li>
-              <h3 className="font-bold">Magma Mengalami Kristalisasi</h3>
+              <h3 className="font-bold">
+                Magma Mengalami Kristalisasi{" "}
+                <span className="italic">(Cooling)</span>
+              </h3>
               <p>
                 Semua jenis batuan di Bumi berasal dari magma, yang merupakan
                 inti pembentuk batuan yang berada di bawah permukaan bumi. Magma
@@ -46,11 +50,16 @@ export default function PengertianPage() {
                 kristalisasi akan berlangsung. Hasil kristalisasi magma ini
                 sering ditemukan di sekitar gunung berapi yang telah mengalami
                 erupsi. Magma yang membeku ini kemudian membentuk jenis batuan
-                yang dikenal sebagai batuan beku (Harris, 2021).{" "}
+                yang dikenal sebagai batuan beku{" "}
+                <span className="italic font-bold">(Igneous Rock)</span>{" "}
+                (Harris, 2021).
               </p>
             </li>
             <li>
-              <h3 className="font-bold">Mengalami Pengankatan dan Pelapukan</h3>
+              <h3 className="font-bold">
+                Mengalami Pengankatan dan Pelapukan{" "}
+                <span className="italic">(Weathering and Lithification)</span>
+              </h3>
               <p>
                 Batuan beku yang telah terbentuk, jika berada di udara terbuka,
                 akan mengalami proses pelapukan. Batuan yang paling cepat
@@ -68,7 +77,9 @@ export default function PengertianPage() {
               </p>
             </li>
             <li>
-              <h3 className="font-bold">Proses Erosi</h3>
+              <h3 className="font-bold">
+                Proses Erosi <span className="italic">(Erosion)</span>
+              </h3>
               <p>
                 Setelah melalui proses pengangkatan dan pelapukan, tahap
                 berikutnya adalah erosi. Dalam tahap ini, air memegang peranan
@@ -80,7 +91,8 @@ export default function PengertianPage() {
             </li>
             <li>
               <h3 className="font-bold">
-                Pengendapan dan Pembentukan Batuan Sedimen
+                Pengendapan dan Pembentukan Batuan Sedimen{" "}
+                <span className="italic">(Sedimentary Rock)</span>
               </h3>
               <p>
                 Material hasil pelapukan batuan beku yang terbawa atau berpindah
@@ -92,7 +104,8 @@ export default function PengertianPage() {
             </li>
             <li>
               <h3 className="font-bold">
-                Batuan Sedimen Berubah Menjadi Batuan Metamorf
+                Batuan Sedimen Berubah Menjadi Batuan Metamorf{" "}
+                <span className="italic">(Metamorphic Rock)</span>
               </h3>
               <p>
                 Batuan sedimen terdapat dalam jumlah yang melimpah, terutama di
@@ -126,6 +139,15 @@ export default function PengertianPage() {
           >
             Jenis-Jenis Batuan
           </Link>
+        </div>
+
+        <div className=" bg-choco p-3 rounded-md text-brule flex flex-wrap gap-5 mt-5 items-center justify-center">
+          <h3 className="font-bold">Fakta Menarik</h3>
+          <p>
+            Tahukah kamu bahwa Siklus Tak Berujung – Siklus batuan adalah proses
+            alami yang terus berlangsung selama jutaan tahun, mengubah satu
+            jenis batuan menjadi jenis lainnya melalui berbagai proses geologi.
+          </p>
         </div>
       </div>
     </div>
