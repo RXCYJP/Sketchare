@@ -1,10 +1,13 @@
 "use client";
 import SceneBatuanSedimen from "@/components/BatuanSedimen/scene";
 import Button from "@/components/button";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { MdArrowBackIosNew } from "react-icons/md";
 import Swal from "sweetalert2";
+import batu from "@/public/imageBatu/batu (1).png";
+import kerikil from "@/public/imageBatu/batu (11).png";
 
 export default function BatuanSendimenPage() {
   const data = [
@@ -29,7 +32,29 @@ export default function BatuanSendimenPage() {
   const router = useRouter();
   return (
     <div>
+      <Image
+        src={batu}
+        alt="batu"
+        width={100}
+        height={100}
+        className="-z-40 absolute"
+      />
+      <Image
+        src={batu}
+        alt="batu"
+        width={100}
+        height={100}
+        className="-z-40 absolute bottom-3 right-2"
+      />
+
       <div className=" py-10">
+        <Image
+          src={kerikil}
+          alt="batu"
+          width={100}
+          height={100}
+          className="-z-40 absolute  left-2"
+        />
         <div className="">
           <h2 className="text-2xl font-bold text-center">Batuan Sedimen</h2>
         </div>

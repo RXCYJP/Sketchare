@@ -3,6 +3,8 @@ import Button from "@/components/button";
 import Link from "next/link";
 import { MdArrowBackIosNew } from "react-icons/md";
 import Swal from "sweetalert2";
+import vulcano from "@/public/imageBatu/batu (10).png";
+import Image from "next/image";
 
 export default function JenisBatuanPage() {
   const modal = () => {
@@ -13,7 +15,7 @@ export default function JenisBatuanPage() {
   };
 
   return (
-    <div className="mt-5 pt-10">
+    <div className="mt-5 pt-10 flex flex-wrap flex-col">
       {/* <Link href="/pengertian" className="text-3xl">
         <MdArrowBackIosNew />
       </Link> */}
@@ -53,14 +55,19 @@ export default function JenisBatuanPage() {
           </Link>
         </Button>
       </div>
-      <div className="flex items-center justify-center">
-        <Button
-          type="button"
-          onClick={modal}
-          className=" bg-choco p-3 rounded-md text-brule flex flex-wrap gap-5 mt-5 "
-        >
-          <h3 className="font-bold">Fakta Menarik</h3>
-        </Button>
+      <div className="flex flex-col items-center">
+        <div className="flex items-center justify-center">
+          <Button
+            type="button"
+            onClick={modal}
+            className=" bg-choco p-3 rounded-md text-brule flex flex-wrap gap-5 mt-5 "
+          >
+            <h3 className="font-bold">Fakta Menarik</h3>
+          </Button>
+        </div>
+        <div className="">
+          <Image src={vulcano} alt="vulcano" width={400} height={100} />
+        </div>
       </div>
     </div>
   );

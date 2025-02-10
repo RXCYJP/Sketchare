@@ -1,10 +1,12 @@
 "use client";
 import SceneBatuanMetamorf from "@/components/BatuanMetamorf3d/scene";
 import Button from "@/components/button";
-
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Swal from "sweetalert2";
+import batu from "@/public/imageBatu/batu (1).png";
+import kerikil from "@/public/imageBatu/batu (11).png";
 
 export default function BatuanMetamorfPage() {
   const data = [
@@ -24,6 +26,14 @@ export default function BatuanMetamorfPage() {
   };
   return (
     <div className="my-5 py-10">
+      <Image
+        src={batu}
+        alt="batu"
+        width={100}
+        height={100}
+        className="absolute -z-40 top-4 right-2"
+      />
+
       <div>
         <div>
           <h2 className="text-2xl font-bold">
@@ -73,6 +83,13 @@ export default function BatuanMetamorfPage() {
             </li>
           </ul>
         </div>
+        <Image
+          src={kerikil}
+          alt="batu"
+          width={100}
+          height={100}
+          className="absolute -z-40 left-2"
+        />
         {/* karakteristik */}
         <div className="text-justify">
           <ul className="list-decimal">
@@ -200,6 +217,13 @@ export default function BatuanMetamorfPage() {
               </ul>
             </li>
           </ul>
+          <Image
+            src={batu}
+            alt="batu"
+            width={90}
+            height={100}
+            className="absolute -z-40 left-6 "
+          />
         </div>
         <div className="flex items-center justify-center">
           <Button

@@ -6,6 +6,8 @@ import { useRouter } from "next/navigation";
 import { BsBack, BsSkipBackwardBtn } from "react-icons/bs";
 import { MdArrowBackIosNew } from "react-icons/md";
 import Swal from "sweetalert2";
+import lava from "@/public/imageBatu/batu (2).png";
+import Image from "next/image";
 
 export default function BatuanBekuPage() {
   const data = ["granit", "rhyolite", "diorite", "andesit", "gabbro", "basalt"];
@@ -19,6 +21,13 @@ export default function BatuanBekuPage() {
   };
   return (
     <div>
+      <Image
+        src={lava}
+        alt="lava"
+        width={90}
+        height={100}
+        className="absolute -z-20 flex justify-end right-0 top-0 "
+      />
       <div className="pb-10">
         <div>
           <h2 className="text-2xl font-bold">Batuan Beku</h2>

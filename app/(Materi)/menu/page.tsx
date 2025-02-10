@@ -2,6 +2,9 @@
 import Button from "@/components/button";
 import Link from "next/link";
 import Swal from "sweetalert2";
+import vulcano from "@/public/imageBatu/batu (4).png";
+import lava from "@/public/imageBatu/batu (3).png";
+import Image from "next/image";
 
 export default function MenuPage() {
   const handleClick = () => {
@@ -13,6 +16,15 @@ export default function MenuPage() {
   };
   return (
     <div className="flex flex-col items-center  pb-10">
+      <div className="">
+        <Image
+          src={vulcano}
+          alt="vulcano"
+          width={150}
+          height={200}
+          className="drop-shadow-lg absolute -z-30 top-0 left-1 "
+        />
+      </div>
       <div>
         <h1 className="font-bold text-2xl text-choco">Menu</h1>
       </div>
@@ -55,6 +67,15 @@ export default function MenuPage() {
         >
           <h3 className="font-bold">Fakta Menarik</h3>
         </Button>
+      </div>
+      <div className="">
+        <Image
+          src={lava}
+          alt="vulcano"
+          width={150}
+          height={200}
+          className="drop-shadow-lg absolute -z-30  right-1 "
+        />
       </div>
     </div>
   );
