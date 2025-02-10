@@ -56,14 +56,16 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
+
       {/* mobile navbar */}
+
       <nav
         className={`fixed inset-x-0 bottom-0 z-10 mx-6 mb-3 flex justify-center rounded-full bg-choco p-2 transition-all md:hidden md:bg-white ${
           isScrolled ? "shadow-xl" : ""
         }`}
       >
         <ul className="text-white text-center">
-          <li className="flex flex-wrap text-center justify-between gap-6">
+          <li className="flex flex-wrap text-center justify-around gap-4">
             <Link
               href="/"
               className={`text-xl flex flex-col items-center justify-center text-center`}

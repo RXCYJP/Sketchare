@@ -1,8 +1,17 @@
+"use client";
 import Button from "@/components/button";
 import Link from "next/link";
 import { MdArrowBackIosNew } from "react-icons/md";
+import Swal from "sweetalert2";
 
 export default function JenisBatuanPage() {
+  const modal = () => {
+    Swal.fire({
+      title: "Tahukah kamu Daur Ulang Batuan?",
+      text: "Batuan yang telah berusia miliaran tahun bisa dihancurkan oleh pelapukan dan berubah menjadi sedimen, yang kemudian membentuk batuan baru melalui proses geologi",
+    });
+  };
+
   return (
     <div className="mt-5 pt-10">
       {/* <Link href="/pengertian" className="text-3xl">
@@ -44,15 +53,14 @@ export default function JenisBatuanPage() {
           </Link>
         </Button>
       </div>
-      <div>
-        <div className=" bg-choco p-3 rounded-md text-brule flex flex-wrap gap-5 mt-5 items-center justify-center">
-          <h3 className="font-bold">Tahukah kamu Daur Ulang Batuan?</h3>
-          <p>
-            Batuan yang telah berusia miliaran tahun bisa dihancurkan oleh
-            pelapukan dan berubah menjadi sedimen, yang kemudian membentuk
-            batuan baru melalui proses geologi
-          </p>
-        </div>
+      <div className="flex items-center justify-center">
+        <Button
+          type="button"
+          onClick={modal}
+          className=" bg-choco p-3 rounded-md text-brule flex flex-wrap gap-5 mt-5 "
+        >
+          <h3 className="font-bold">Fakta Menarik</h3>
+        </Button>
       </div>
     </div>
   );

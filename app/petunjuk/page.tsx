@@ -1,6 +1,6 @@
 export default function TujuanPage() {
   return (
-    <div>
+    <div className="h-full py-10">
       <div className="text-center">
         <h1 className=" font-bold text-choco">
           Petunjuk Penggunaan Media Pembelajaran SKETCHARE
@@ -17,8 +17,8 @@ export default function TujuanPage() {
               <li>Masukan username dan password</li>
               <li>
                 Masukkan kata sandi yang berisi keterangan kelas pada kolom
-                <span className="italic">Password,</span>
-                lalu tekan tombol <span className="italic">Login</span>
+                <span className="italic"> Password, </span>
+                lalu tekan tombol <span className="italic"> Login</span>
               </li>
               <li>
                 contoh: <br /> Username: SRI WAHYUNI <br />

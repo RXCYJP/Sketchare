@@ -1,14 +1,14 @@
 export default function TujuanPage() {
   return (
-    <div className="h-full bg-choco rounded-lg">
-      <div className="mt-5 text-wrap text-white p-10">
-        <h3 className="space-y-2 mb-4 text-xl font-bold text-white text-center">
+    <div className="h-full py-10 sm:px-6">
+      <div className="p-4 bg-choco rounded-lg text-white">
+        <h3 className="mb-4 text-xl font-bold text-center">
           Capaian Pembelajaran
         </h3>
-        <div>
-          <p className="text-justify">
+        <div className="">
+          <p className="text-wrap text-justify ">
             Di akhir fase E, peserta didik mampu memahami Konsep Dasar Ilmu
-            Geografi, Peta/Penginderaan jauh/GIS, Penelitian Geografi, dan
+            Geografi, Peta / Penginderaan jauh / GIS, Penelitian Geografi, dan
             Fenomena Geosfer, mampu mencari/mengolah informasi tentang
             keberagaman wilayah secara fisik dan sosial, mampu menganalisa
             wilayah berdasarkan ilmu pengetahuan dasar geografi, karakter fisik
@@ -17,12 +17,13 @@ export default function TujuanPage() {
           </p>
         </div>
       </div>
-      <div className="mt-5 text-wrap text-white p-10">
-        <h3 className="mb-4 text-xl font-bold text-white text-center">
+
+      <div className="mt-5 p-1 bg-choco rounded-lg text-white text-[14px] sm:text-base leading-relaxed">
+        <h3 className="mb-4 text-xl font-bold text-center">
           Tujuan Pembelajaran
         </h3>
         <div>
-          <ul className="list-decimal">
+          <ul className="list-decimal pl-5 space-y-2 text-justify">
             <li>
               <p>
                 Memahami konsep siklus batuan (
@@ -30,23 +31,23 @@ export default function TujuanPage() {
               </p>
             </li>
             <li>
-              <p>Mengidentifikasi jenis-jenis batuan </p>
+              <p>Mengidentifikasi jenis-jenis batuan</p>
             </li>
             <li>
-              <p>
+              <p className="whitespace-nowrap text-wrap">
                 Memahami proses pembentukan batuan beku (
-                <span className="italic">Igneous Rock</span>){" "}
+                <span className="italic">Igneous Rock</span>)
               </p>
             </li>
             <li>
-              <p>
+              <p className="">
                 Memahami proses pembentukan batuan sedimen (
-                <span className="italic">Sendimentary Rock</span>)
+                <span className="italic">Sedimentary Rock</span>)
               </p>
             </li>
             <li>
               <p>
-                Memahami proses pembentukan batuan metamor (
+                Memahami proses pembentukan batuan metamorf (
                 <span className="italic">Metamorphic Rock</span>)
               </p>
             </li>

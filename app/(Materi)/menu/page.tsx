@@ -1,3 +1,4 @@
+"use client";
 import Button from "@/components/button";
 import Link from "next/link";
 import Swal from "sweetalert2";
@@ -5,9 +6,9 @@ import Swal from "sweetalert2";
 export default function MenuPage() {
   const handleClick = () => {
     Swal.fire({
-      title: "Ketahui Fakta Menarik",
-      text: "Tahukah kamu bahwa Siklus Tak Berujung – Siklus batuan adalah proses alami yang terus berlangsung selama jutaan tahun, mengubah satu jenis batuan menjadi jenis lainnya melalui berbagai proses geologi.",
-      icon: "info",
+      title: "Tahukah kamu bahwa Siklus Tak Berujung? ",
+      text: "Siklus batuan adalah proses alami yang terus berlangsung selama jutaan tahun, mengubah satu jenis batuan menjadi jenis lainnya melalui berbagai proses geologi.",
+      // icon: "info",
     });
   };
   return (
@@ -15,17 +16,7 @@ export default function MenuPage() {
       <div>
         <h1 className="font-bold text-2xl text-choco">Menu</h1>
       </div>
-      <div>
-        <iframe
-          className="w-full h-[300px] md:h-[500px] mt-5"
-          src="https://www.youtube.com/embed/7JP9R-OpGqQ?si=3KC0NnCWS2Xo30Gu"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
-      </div>
+
       <div className=" flex flex-wrap gap-7 justify-center">
         <Link href="/pengertian">
           <Button
@@ -35,6 +26,17 @@ export default function MenuPage() {
             Siklus Batuan
           </Button>
         </Link>
+        <div>
+          <iframe
+            className="w-full h-[300px] md:h-[500px] mt-5"
+            src="https://www.youtube.com/embed/7JP9R-OpGqQ?si=3KC0NnCWS2Xo30Gu"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+        </div>
         <Link href="/jenis-batuan">
           <Button
             type="button"
@@ -46,14 +48,13 @@ export default function MenuPage() {
       </div>
 
       <div>
-        <div className=" bg-choco p-3 rounded-md text-brule flex flex-wrap gap-5 mt-5 items-center justify-center">
+        <Button
+          type="button"
+          onClick={handleClick}
+          className=" bg-choco p-3 rounded-md text-brule flex flex-wrap gap-5 mt-5 items-center justify-center"
+        >
           <h3 className="font-bold">Fakta Menarik</h3>
-          <p>
-            Tahukah kamu bahwa Siklus Tak Berujung – Siklus batuan adalah proses
-            alami yang terus berlangsung selama jutaan tahun, mengubah satu
-            jenis batuan menjadi jenis lainnya melalui berbagai proses geologi.
-          </p>
-        </div>
+        </Button>
       </div>
     </div>
   );

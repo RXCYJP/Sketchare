@@ -4,6 +4,7 @@ import Button from "@/components/button";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { MdArrowBackIosNew } from "react-icons/md";
+import Swal from "sweetalert2";
 
 export default function BatuanSendimenPage() {
   const data = [
@@ -17,6 +18,13 @@ export default function BatuanSendimenPage() {
     "dolomit",
     "magnesit",
   ];
+
+  const handleClick = () => {
+    Swal.fire({
+      title: "Tahukah kamu bahwa Siklus Tak Berujung? ",
+      text: " Batuan sedimen terbentuk dari akumulasi partikel-partikel yang terangkut oleh angin, air, atau es. Contoh batuan ini adalah batu pasir dan batu kapur.",
+    });
+  };
 
   const router = useRouter();
   return (
@@ -38,7 +46,7 @@ export default function BatuanSendimenPage() {
           <ul className="list-decimal">
             <li>
               <span className="font-bold">Sedimen Klastik</span> <br />
-              <p>
+              <p className="text-justify">
                 Batuan sedimen klastik adalah jenis batuan sedimen yang memiliki
                 komposisi kimia yang sama seperti batuan asalnya. Saat diangkut,
                 batuan ini mengalami proses penghancuran secara mekanis, dari
@@ -53,7 +61,7 @@ export default function BatuanSendimenPage() {
             </li>
             <li>
               <span className="font-bold">Sedimen Kimiawi</span> <br />{" "}
-              <p>
+              <p className="text-justify">
                 {" "}
                 Batuan Sedimen Kimiawi adalah batuan sedimen yang terbentuk oleh
                 proses pengendapan yang terjadi karena proses kimia, seperti
@@ -72,7 +80,7 @@ export default function BatuanSendimenPage() {
             </li>
             <li>
               <span className="font-bold">Sedimen Organik</span> <br />{" "}
-              <p>
+              <p className="text-justify">
                 {" "}
                 Batuan Batuan sedimen organik adalah batuan sedimen yang terjadi
                 karena proses pengendapan mendapat bantuan dari organisme. Sisa
@@ -82,6 +90,172 @@ export default function BatuanSendimenPage() {
               </p>
             </li>
           </ul>
+        </div>
+        {/* karakteristik batu sedimen */}
+        <div>
+          <div className="mt-5 text-justify">
+            <h2>
+              Adapun ciri-ciri dan karakteristik yang terdapat pada batuan
+              sedimen, yaitu sebagai berikut.
+            </h2>
+            <div>
+              <ul className="list-decimal">
+                <li>
+                  <span className="font-bold">Warna Batuan Sedimen</span>
+                  <p>
+                    Secara umum, warna pada batuan sedimen dipengaruhi oleh
+                    beberapa faktor, yaitu:
+                  </p>
+                  <ul className="list-outside list-disc mx-3">
+                    <li>
+                      Warna mineral penyusun batuan sedimen. Misalnya, jika
+                      batuan sedimen didominasi oleh mineral kuarsa, maka
+                      warnanya cenderung putih.
+                    </li>
+                    <li>Warna massa dasar (matriks) atau warna semen.</li>
+                    <li>
+                      Warna material yang menyelubungi (coating material).
+                      Contohnya, batupasir kuarsa yang diselubungi oleh
+                      glaukonit akan berwarna hijau.
+                    </li>
+                    <li>
+                      Derajat kehalusan butir penyusunnya. Pada batuan dengan
+                      komposisi yang sama, semakin halus ukuran butirnya, maka
+                      warnanya cenderung lebih gelap.
+                    </li>
+                    <li>
+                      Kondisi lingkungan pengendapan. Jika lingkungan bersifat
+                      reduksi, warna batuan akan lebih gelap dibandingkan dengan
+                      lingkungan oksidasi.{" "}
+                    </li>
+                    <li>
+                      Kandungan material organik. Batuan sedimen yang mengandung
+                      banyak material organik cenderung memiliki warna yang
+                      lebih gelap.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <div>
+                    <span className="font-bold">Struktur Sedimen</span>
+                  </div>
+                  <div>
+                    <ul className="list-disc list-outside">
+                      <li className="">
+                        <h2>
+                          Struktur di Dalam Batuan{" "}
+                          <span className="italic">
+                            (Features Within Strata){" "}
+                          </span>
+                        </h2>
+                        <ul className="list-outside list-disc mx-3">
+                          <li>
+                            Struktur Pelapisan{" "}
+                            <span className="italic">
+                              (Planar atau Stratifikasi)
+                            </span>{" "}
+                            Jika ketebalan perlapisan kurang dari 1 cm, maka
+                            disebut struktur laminasi.
+                          </li>
+                          <li>
+                            Struktur Pelapisan Silang-siur{" "}
+                            <span className="italic">
+                              (Cross Bedding / Cross Lamination)
+                            </span>
+                          </li>
+                          <li>
+                            Struktur Pelapisan Pilihan{" "}
+                            <span className="italic">(Graded Bedding)</span>
+                          </li>
+                          <li>
+                            Normal, jika butiran besar berada di bagian bawah
+                            dan semakin halus ke atas.
+                          </li>
+                          <li>
+                            Terbalik <span className="italic">(inverse)</span>,
+                            jika butiran halus berada di bagian bawah dan
+                            semakin kasar ke atas.
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <h2>
+                          Struktur Permukaan{" "}
+                          <span className="italic">(Surface Features)</span>{" "}
+                        </h2>
+                        <ul className="list-outside list-disc mx-3">
+                          <li>
+                            <span className="italic"> Ripples</span> (pola
+                            gelombang akibat arus atau current{" "}
+                            <span className="italic">ripple</span> marks).
+                          </li>
+                          <li>
+                            Cetakan jejak kaki hewan{" "}
+                            <span className="italic">
+                              (Footprints of various walking animals).
+                            </span>
+                          </li>
+                          <li>
+                            Cetakan jejak hewan melata{" "}
+                            <span className="italic">
+                              {" "}
+                              (Tracks and trails of crawling animals).
+                            </span>
+                          </li>
+                          <li>
+                            Rekahan lumpur{" "}
+                            <span className="italic">
+                              (Mud cracks atau polygonal cracks).
+                            </span>
+                          </li>
+                          <li>
+                            {" "}
+                            Gumuk pasir{" "}
+                            <span className="italic">
+                              {" "}
+                              (Dunes atau Antidunes).{" "}
+                            </span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <h3>
+                          Struktur Erosi{" "}
+                          <span className="italic">
+                            (Erosional Sedimentary Structures)
+                          </span>
+                        </h3>
+                        <ul className="list-outside list-disc mx-3">
+                          <li>
+                            Alur atau galur{" "}
+                            <span className="italic">
+                              (Flute marks, groove marks, linear ridges).
+                            </span>
+                          </li>
+                          <li>
+                            Bekas tumbukan{" "}
+                            <span className="italic">(Impact marks)</span>,
+                            yaitu jejak akibat tertimpa butiran fragmen batuan
+                            atau fosil.{" "}
+                          </li>
+                          <li>
+                            Saluran dan cekungan gerusan{" "}
+                            <span className="italic">
+                              (Channels and scours).
+                            </span>
+                          </li>
+                          <li>
+                            Cekungan gerusan dan pengisian{" "}
+                            <span className="italic"> (Scours & fills).</span>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div className="flex flex-wrap justify-center gap-7 mt-5">
           {data.map((item, index) => (
@@ -97,17 +271,14 @@ export default function BatuanSendimenPage() {
           {/* <SceneBatuanSedimen /> */}
         </div>
 
-        <div>
-          <div className=" bg-choco p-3 rounded-md text-brule flex flex-wrap gap-5 mt-5 items-center justify-center">
-            <h3 className="font-bold">
-              Tahukah kamu Batuan Sedimen dari Endapan
-            </h3>
-            <p>
-              Batuan sedimen terbentuk dari akumulasi partikel-partikel yang
-              terangkut oleh angin, air, atau es. Contoh batuan ini adalah batu
-              pasir dan batu kapur.
-            </p>
-          </div>
+        <div className="flex justify-center">
+          <Button
+            type="button"
+            onClick={handleClick}
+            className=" bg-choco p-3 rounded-md text-brule flex flex-wrap gap-5 mt-5 items-center justify-center"
+          >
+            <h3 className="font-bold">Fakta Menarik</h3>
+          </Button>
         </div>
       </div>
     </div>
