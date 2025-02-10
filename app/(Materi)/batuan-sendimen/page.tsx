@@ -12,7 +12,6 @@ import kerikil from "@/public/imageBatu/batu (11).png";
 export default function BatuanSendimenPage() {
   const data = [
     "breksi",
-    "batubara",
     "batupasir",
     "batupasirkwarsa",
     "karbonat",
@@ -20,11 +19,13 @@ export default function BatuanSendimenPage() {
     "calcite",
     "dolomit",
     "magnesit",
+    "batubara",
   ];
+  const selectedItem = data[8];
 
   const handleClick = () => {
     Swal.fire({
-      title: "Tahukah kamu bahwa Siklus Tak Berujung? ",
+      title: "Tahukah kamu Batuan Sedimen dari Endapan ",
       text: " Batuan sedimen terbentuk dari akumulasi partikel-partikel yang terangkut oleh angin, air, atau es. Contoh batuan ini adalah batu pasir dan batu kapur.",
     });
   };
@@ -83,6 +84,18 @@ export default function BatuanSendimenPage() {
                 mengubahnya menjadi kerikil, pasir, atau lumpur yang akhirnya
                 mengendap di lokasi baru (Hartono, 2007).
               </p>
+              <div className="flex flex-wrap justify-center gap-7 mt-5">
+                {data.slice(0, 3).map((item, index) => (
+                  <Button
+                    key={index}
+                    type="button"
+                    className="text-2xl p-2 bg-choco text-brule rounded-md capitalize w-[200px]"
+                    onClick={() => router.push(`/batuan-sendimen/${item}`)}
+                  >
+                    {item}
+                  </Button>
+                ))}
+              </div>
             </li>
             <li>
               <span className="font-bold">Sedimen Kimiawi</span> <br />{" "}
@@ -103,6 +116,18 @@ export default function BatuanSendimenPage() {
                 (Hartono, 2007).
               </p>
             </li>
+            <div className="flex flex-wrap justify-center gap-7 mt-5">
+              {data.slice(4, 8).map((item, index) => (
+                <Button
+                  key={index}
+                  type="button"
+                  className="text-2xl p-2 bg-choco text-brule rounded-md capitalize w-[200px]"
+                  onClick={() => router.push(`/batuan-sendimen/${item}`)}
+                >
+                  {item}
+                </Button>
+              ))}
+            </div>
             <li>
               <span className="font-bold">Sedimen Organik</span> <br />{" "}
               <p className="text-justify">
@@ -114,6 +139,29 @@ export default function BatuanSendimenPage() {
                 di hutan, dan organisme-organisme lainnya (Hartono, 2007).
               </p>
             </li>
+            <div className="flex flex-wrap justify-center gap-7 mt-5">
+              {/* {selectedItem && (
+                <Button
+                  type="button"
+                  className="text-2xl p-2 bg-choco text-brule rounded-md capitalize w-[200px]"
+                  onClick={() =>
+                    router.push(`/batuan-sendimen/${selectedItem}`)
+                  }
+                >
+                  {selectedItem}
+                </Button>
+              )} */}
+              {data.slice(8).map((item, index) => (
+                <Button
+                  key={index}
+                  type="button"
+                  className="text-2xl p-2 bg-choco text-brule rounded-md capitalize w-[200px]"
+                  onClick={() => router.push(`/batuan-sendimen/${item}`)}
+                >
+                  {item}
+                </Button>
+              ))}
+            </div>
           </ul>
         </div>
         {/* karakteristik batu sedimen */}
@@ -283,7 +331,7 @@ export default function BatuanSendimenPage() {
           </div>
         </div>
         <div className="flex flex-wrap justify-center gap-7 mt-5">
-          {data.map((item, index) => (
+          {/* {data.map((item, index) => (
             <Button
               key={index}
               type="button"
@@ -292,7 +340,7 @@ export default function BatuanSendimenPage() {
             >
               {item}
             </Button>
-          ))}
+          ))} */}
           {/* <SceneBatuanSedimen /> */}
         </div>
 
