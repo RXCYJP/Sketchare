@@ -86,13 +86,15 @@ export default function DashboardPage() {
     };
     getData();
   }, []);
+
   if (status === "loading" || status === "unauthenticated") {
     return (
       <div className="flex justify-center items-center h-screen">
         <Loader></Loader>
       </div>
     );
-  } else if (status === "authenticated") {
+  }
+  if (status === "authenticated") {
     return (
       <div className=" flex flex-col">
         <div>
