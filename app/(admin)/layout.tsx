@@ -4,8 +4,9 @@ import { Inter } from "next/font/google";
 import { SessionProvider, useSession } from "next-auth/react";
 import Navbar from "@/components/navbar";
 import { redirect } from "next/navigation";
-import Siswa from "./dashboard/@siswa/page";
+import Siswa from "./dashboard/[kelas]/page";
 import Head from "next/head";
+import Sidebar from "@/components/sidebar";
 
 export default function Layout({
   children,
@@ -23,16 +24,18 @@ export default function Layout({
     redirect("/login");
   } else if (session.status === "authenticated") {
     return (
-      <div>
-        <Navbar />
+      <>
+        {/* <Navbar />   */}
         <SessionProvider>
           <Head>
             <title>SKETCHARE</title>
           </Head>
-          <div className=" p-10 my-5">{children}</div>
-          <div className="p-10 my-5">{Siswa}</div>
+          <div className="">
+            <Sidebar />
+            <div className=" p-10 my-5">{children}</div>
+          </div>
         </SessionProvider>
-      </div>
+      </>
     );
   }
 }
