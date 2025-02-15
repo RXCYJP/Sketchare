@@ -64,9 +64,9 @@ export default function BatuanSendimenPage() {
             Batuan sedimen adalah jenis batuan yang terjadi karena proses
             pengendapan materi hasil erosi atau pelarutan. dengan kata lain
             batuan sedimen merupakan batuan yang berasal dari batuan yang sudah
-            pernah ada sebelumnya. batuan sedimen hanya menyusun sekitar 5% dari
+            pernah ada sebelumnya. Batuan sedimen hanya menyusun sekitar 5% dari
             banyak total volume kerak bumi dan menutupi sekitar 75% dari
-            permukaan bumi. selain itu, sekitar 80% permukaan benua memang
+            permukaan bumi. Selain itu, sekitar 80% permukaan benua memang
             tertutup oleh batuan sedimen.
           </p>
           <ul className="list-decimal">

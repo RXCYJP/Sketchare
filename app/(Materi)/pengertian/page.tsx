@@ -136,7 +136,7 @@ export default function PengertianPage() {
                 Karena batuan memiliki siklus yang berputar seperti siklus air
                 hujan, batuan metamorf atau malihan juga dapat kembali menjadi
                 magma. Magma ini kemudian akan melalui proses selanjutnya, dan
-                siklus tersebut terus berulang tanpa henti. (Harris, 2021).
+                siklus tersebut terus berulang tanpa henti (Harris, 2021).
               </p>
             </li>
           </ul>

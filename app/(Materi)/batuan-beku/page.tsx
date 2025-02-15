@@ -10,7 +10,7 @@ import lava from "@/public/imageBatu/batu (2).png";
 import Image from "next/image";
 
 export default function BatuanBekuPage() {
-  const data = ["granit", "rhyolite", "diorite", "andesit", "gabbro", "basalt"];
+  const data = ["granit", "diorite", "gabbro", "rhyolite", "andesit", "basalt"];
   const router = useRouter();
   const modal = () => {
     Swal.fire({
@@ -38,7 +38,7 @@ export default function BatuanBekuPage() {
             Batuan Beku adalah jenis batuan yang terbentuk dari magma yang
             mendingin dan mengeras dengan atau tanpa proses kristalisasi, batuan
             beku dapat berupa batuan ekstrusif jika terbentuk di permukaan bumi
-            atau intrusif jika magma membeku di bawah tanah. (Yulhendra, 2016).
+            atau intrusif jika magma membeku di bawah tanah (Yulhendra, 2016).
             Jenis dan sifat batuan beku ditentukan dari tipe magmanya. Tipe
             magma tergantung dari komposisi kimia magma. Komposisi kimia magma
             dikontrol dari limpahan unsur-unsur dalam bumi, yaitu Si, Al, Fe,
@@ -81,6 +81,18 @@ export default function BatuanBekuPage() {
                   Adapun jenis batuan yang termasuk dalam batuan intrusif yaitu
                   <span className="italic"> granite, diorite, dan gabbro.</span>
                 </p>
+                <div className="flex items-center flex-wrap gap-5 mt-3">
+                  {data.slice(0, 3).map((item, index) => (
+                    <Button
+                      key={index}
+                      type="button"
+                      className="text-2xl p-2 bg-choco text-brule rounded-md capitalize w-[200px]"
+                      onClick={() => router.push(`/batuan-metamorf/${item}`)}
+                    >
+                      {item}
+                    </Button>
+                  ))}
+                </div>
               </div>
             </li>
             <li>
@@ -104,6 +116,21 @@ export default function BatuanBekuPage() {
                   komposisi kimiawi). Adapun jenis batuan yang termasuk dalam
                   batuan extrusive yaitu rhyolite, andesite, dan basalt.
                 </p>
+                <div>
+                  {" "}
+                  <div className="flex items-center flex-wrap gap-5 mt-3">
+                    {data.slice(3, 6).map((item, index) => (
+                      <Button
+                        key={index}
+                        type="button"
+                        className="text-2xl p-2 bg-choco text-brule rounded-md capitalize w-[200px]"
+                        onClick={() => router.push(`/batuan-metamorf/${item}`)}
+                      >
+                        {item}
+                      </Button>
+                    ))}
+                  </div>
+                </div>
               </div>
             </li>
           </ul>
@@ -173,7 +200,7 @@ export default function BatuanBekuPage() {
                       jelas, sebagian teratur, sebagian tidak.
                     </li>
                     <li>
-                      <span className="italic">Anhedral</span>,kristalnya
+                      <span className="italic">Anhedral</span>, kristalnya
                       dibatasi oleh bidang-bidang kristal yang tidak teratur.
                     </li>
                   </ul>
@@ -213,7 +240,7 @@ export default function BatuanBekuPage() {
                         magma. Proses ini terjadi karena pendinginan magma
                         berlangsung sangat lambat dan magma memiliki viskositas
                         tinggi. Batuan ini juga dikenal sebagai batuan plutonik
-                        atau deep-seated rock. Contohnya adalah batuan granit.
+                        atau deep-seated rock Contohnya adalah batuan granit.
                       </p>
                     </li>
                     <li>
@@ -222,7 +249,7 @@ export default function BatuanBekuPage() {
                         Batuan beku korok merupakan batuan yang terbentuk di
                         celah-celah litosfer (kerak bumi) atau di lereng gunung.
                         Batuan ini terbentuk di dekat permukaan bumi dan dikenal
-                        juga dengan istilah dike rock. Contohnya adalah batu
+                        juga dengan istilah dike rock Contohnya adalah batu
                         diorit.
                       </p>
                     </li>
@@ -268,19 +295,7 @@ export default function BatuanBekuPage() {
         </div>
 
         {/* List batuan beku */}
-        <div className="flex flex-wrap gap-5 mt-5 justify-center pb-9">
-          {data.map((item, index) => (
-            <Button
-              key={index}
-              type="button"
-              className="text-2xl p-2 bg-choco text-brule rounded-md capitalize w-[200px]"
-              onClick={() => router.push(`/batuan-beku/${item}`)}
-            >
-              {item}
-            </Button>
-          ))}
-          {/* <SceneBatuanBeku /> */}
-        </div>
+
         <div className="flex justify-center">
           <Button
             onClick={modal}
