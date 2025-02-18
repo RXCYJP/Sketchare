@@ -129,9 +129,8 @@ export default function BatuanSendimenPage() {
               ))}
             </div>
             <li>
-              <span className="font-bold">Sedimen Organik</span> <br />{" "}
+              <span className="font-bold">Sedimen Organik</span> <br />
               <p className="text-justify">
-                {" "}
                 Batuan Batuan sedimen organik adalah batuan sedimen yang terjadi
                 karena proses pengendapan mendapat bantuan dari organisme. Sisa
                 rumah, atau bangkai binatang laut yang tertimbun di dasar laut,
@@ -179,32 +178,32 @@ export default function BatuanSendimenPage() {
                     Secara umum, warna pada batuan sedimen dipengaruhi oleh
                     beberapa faktor, yaitu:
                   </p>
-                  <ul className="list-outside list-disc mx-3">
+                  <ul className="list-outside  mx-3">
                     <li>
-                      Warna mineral penyusun batuan sedimen. Misalnya, jika
+                      A. Warna mineral penyusun batuan sedimen. Misalnya, jika
                       batuan sedimen didominasi oleh mineral kuarsa, maka
                       warnanya cenderung putih.
                     </li>
-                    <li>Warna massa dasar (matriks) atau warna semen.</li>
+                    <li>B. Warna massa dasar (matriks) atau warna semen.</li>
                     <li>
-                      Warna material yang menyelubungi (coating material).
+                      C. Warna material yang menyelubungi (coating material).
                       Contohnya, batupasir kuarsa yang diselubungi oleh
                       glaukonit akan berwarna hijau.
                     </li>
                     <li>
-                      Derajat kehalusan butir penyusunnya. Pada batuan dengan
+                      D. Derajat kehalusan butir penyusunnya. Pada batuan dengan
                       komposisi yang sama, semakin halus ukuran butirnya, maka
                       warnanya cenderung lebih gelap.
                     </li>
                     <li>
-                      Kondisi lingkungan pengendapan. Jika lingkungan bersifat
-                      reduksi, warna batuan akan lebih gelap dibandingkan dengan
-                      lingkungan oksidasi.{" "}
+                      E. Kondisi lingkungan pengendapan. Jika lingkungan
+                      bersifat reduksi, warna batuan akan lebih gelap
+                      dibandingkan dengan lingkungan oksidasi.{" "}
                     </li>
                     <li>
-                      Kandungan material organik. Batuan sedimen yang mengandung
-                      banyak material organik cenderung memiliki warna yang
-                      lebih gelap.
+                      F. Kandungan material organik. Batuan sedimen yang
+                      mengandung banyak material organik cenderung memiliki
+                      warna yang lebih gelap.
                     </li>
                   </ul>
                 </li>
@@ -213,17 +212,17 @@ export default function BatuanSendimenPage() {
                     <span className="font-bold">Struktur Sedimen</span>
                   </div>
                   <div>
-                    <ul className="list-disc list-outside">
+                    <ul className=" list-outside">
                       <li className="">
                         <h2>
-                          Struktur di Dalam Batuan{" "}
+                          A. Struktur di Dalam Batuan{" "}
                           <span className="italic">
                             (Features Within Strata){" "}
                           </span>
                         </h2>
-                        <ul className="list-outside list-disc mx-3">
+                        <ul className="list-outside  mx-3">
                           <li>
-                            Struktur Pelapisan{" "}
+                            a. Struktur Pelapisan{" "}
                             <span className="italic">
                               (Planar atau Stratifikasi)
                             </span>{" "}
@@ -231,59 +230,60 @@ export default function BatuanSendimenPage() {
                             disebut struktur laminasi.
                           </li>
                           <li>
-                            Struktur Pelapisan Silang-siur{" "}
+                            b. Struktur Pelapisan Silang-siur{" "}
                             <span className="italic">
                               (Cross Bedding / Cross Lamination)
                             </span>
                           </li>
                           <li>
-                            Struktur Pelapisan Pilihan{" "}
+                            c. Struktur Pelapisan Pilihan{" "}
                             <span className="italic">(Graded Bedding)</span>
                           </li>
                           <li>
-                            Normal, jika butiran besar berada di bagian bawah
+                            d. Normal, jika butiran besar berada di bagian bawah
                             dan semakin halus ke atas.
                           </li>
                           <li>
-                            Terbalik <span className="italic">(inverse)</span>,
-                            jika butiran halus berada di bagian bawah dan
-                            semakin kasar ke atas.
+                            e. Terbalik{" "}
+                            <span className="italic">(inverse)</span>, jika
+                            butiran halus berada di bagian bawah dan semakin
+                            kasar ke atas.
                           </li>
                         </ul>
                       </li>
                       <li>
                         <h2>
-                          Struktur Permukaan{" "}
+                          B. Struktur Permukaan{" "}
                           <span className="italic">(Surface Features)</span>{" "}
                         </h2>
-                        <ul className="list-outside list-disc mx-3">
+                        <ul className="list-outside mx-3">
                           <li>
-                            <span className="italic"> Ripples</span> (pola
+                            a. <span className="italic"> Ripples</span> (pola
                             gelombang akibat arus atau current{" "}
                             <span className="italic">ripple</span> marks).
                           </li>
                           <li>
-                            Cetakan jejak kaki hewan{" "}
+                            b. Cetakan jejak kaki hewan{" "}
                             <span className="italic">
                               (Footprints of various walking animals).
                             </span>
                           </li>
                           <li>
-                            Cetakan jejak hewan melata{" "}
+                            c. Cetakan jejak hewan melata{" "}
                             <span className="italic">
                               {" "}
                               (Tracks and trails of crawling animals).
                             </span>
                           </li>
                           <li>
-                            Rekahan lumpur{" "}
+                            d. Rekahan lumpur{" "}
                             <span className="italic">
                               (Mud cracks atau polygonal cracks).
                             </span>
                           </li>
                           <li>
                             {" "}
-                            Gumuk pasir{" "}
+                            e. Gumuk pasir{" "}
                             <span className="italic">
                               {" "}
                               (Dunes atau Antidunes).{" "}
@@ -293,32 +293,32 @@ export default function BatuanSendimenPage() {
                       </li>
                       <li>
                         <h3>
-                          Struktur Erosi{" "}
+                          C. Struktur Erosi{" "}
                           <span className="italic">
                             (Erosional Sedimentary Structures)
                           </span>
                         </h3>
-                        <ul className="list-outside list-disc mx-3">
+                        <ul className="list-outside mx-3">
                           <li>
-                            Alur atau galur{" "}
+                            a. Alur atau galur{" "}
                             <span className="italic">
                               (Flute marks, groove marks, linear ridges).
                             </span>
                           </li>
                           <li>
-                            Bekas tumbukan{" "}
+                            b. Bekas tumbukan{" "}
                             <span className="italic">(Impact marks)</span>,
                             yaitu jejak akibat tertimpa butiran fragmen batuan
                             atau fosil.{" "}
                           </li>
                           <li>
-                            Saluran dan cekungan gerusan{" "}
+                            c. Saluran dan cekungan gerusan{" "}
                             <span className="italic">
                               (Channels and scours).
                             </span>
                           </li>
                           <li>
-                            Cekungan gerusan dan pengisian{" "}
+                            d. Cekungan gerusan dan pengisian{" "}
                             <span className="italic"> (Scours & fills).</span>
                           </li>
                         </ul>

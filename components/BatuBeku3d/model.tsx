@@ -52,7 +52,7 @@ export function Granit() {
       rotation={[-Math.PI / 2, 0, 0]}
       onClick={handleClick}
     >
-      <primitive object={scene} orbitControls />;
+      <primitive object={scene} orbitControls />
     </group>
   );
 }
@@ -74,7 +74,8 @@ export function Rhyolite() {
       rotation={[-Math.PI / 2, 0, 0]}
       onClick={handleClick}
     >
-      <primitive object={scene} orbitControls />;
+      <primitive object={scene} orbitControls />
+      <p></p>
     </group>
   );
 }

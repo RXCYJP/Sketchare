@@ -44,11 +44,12 @@ export default function BatuanMetamorfPage() {
         <div>
           <p className="text-justify">
             Batuan Metamorfisme adalah batuan hasil dari perubahan batuan asal
-            (batuan beku dan batuan sedimen) terjadi akibat proses metamorfosis.
-            Metamorfosis merupakan suatu proses yang dialami batuan asal akibat
-            dari adanya tekanan atau temperatur yang meningkat dan temperatur
-            yang sama-sama meningkat. Adapun Klasifikasi batuan metamorf
-            berdasarkan teksturnya yaitu sebagai berikut:
+            (batuan beku dan batuan sedimen) terjadi akibat proses metamorfosis
+            (Noor, 2012). Metamorfosis merupakan suatu proses yang dialami
+            batuan asal akibat dari adanya tekanan atau temperatur yang
+            meningkat dan temperatur yang sama-sama meningkat (Hartono, 2007).
+            Adapun Klasifikasi batuan metamorf berdasarkan teksturnya yaitu
+            sebagai berikut:
           </p>
           <ul className="list-decimal">
             <li>
@@ -95,18 +96,19 @@ export default function BatuanMetamorfPage() {
           <ul className="list-decimal">
             <li>
               <h2 className="font-bold">Bentuk Kristal Batuan Metamorf</h2>
-              <ul className="list-disc mx-3">
+              <ul className="mx-3">
                 <li>
-                  <span className=" italic">Euhedral </span> (Kristal berbentuk
-                  sempurna, dibatasi oleh bidang kristal yang ideal, tegas, dan
-                  teratur).{" "}
+                  A. <span className=" italic">Euhedral </span> (Kristal
+                  berbentuk sempurna, dibatasi oleh bidang kristal yang ideal,
+                  tegas, dan teratur).{" "}
                 </li>
                 <li>
-                  <span className="italic">Subhedral </span> (Kristal dibatasi
-                  oleh bidang kristal yang sebagian teratur dan sebagian tidak).{" "}
+                  B. <span className="italic">Subhedral </span> (Kristal
+                  dibatasi oleh bidang kristal yang sebagian teratur dan
+                  sebagian tidak).{" "}
                 </li>
                 <li>
-                  <span className="italic">Anhedral </span>
+                  C. <span className="italic">Anhedral </span>
                   (Kristal tidak memiliki bentuk yang teratur).{" "}
                 </li>
               </ul>
@@ -114,13 +116,13 @@ export default function BatuanMetamorfPage() {
             <li>
               <h2 className="font-bold">Berdasarkan bentuk kristalnya</h2>
               <p>tekstur batuan metamorf dapat dibedakan menjadi:</p>
-              <ul className="list-disc mx-3">
+              <ul className=" mx-3">
                 <li>
-                  <span className="italic">Idioblastik</span> (Mineral memiliki
-                  bentuk kristal euhedral).
+                  A. <span className="italic">Idioblastik</span> (Mineral
+                  memiliki bentuk kristal euhedral).
                 </li>
                 <li>
-                  <span>Xenoblastik/Hypidioblastik </span>(Mineral memiliki
+                  B. <span>Xenoblastik/Hypidioblastik </span>(Mineral memiliki
                   bentuk kristal anhedral).
                 </li>
               </ul>
@@ -131,13 +133,13 @@ export default function BatuanMetamorfPage() {
                 Berdasarkan ukuran butirnya, tekstur batuan metamorf dapat
                 dibedakan menjadi:
               </p>
-              <ul className="list-disc mx-3">
+              <ul className="mx-3">
                 <li>
-                  <span className="italic">Fanerit </span> (Kristal masih dapat
-                  dilihat dengan mata telanjang).
+                  A. <span className="italic">Fanerit </span> (Kristal masih
+                  dapat dilihat dengan mata telanjang).
                 </li>
                 <li>
-                  <span className="italic"> Afanit</span> (Kristal berukuran
+                  B. <span className="italic"> Afanit</span> (Kristal berukuran
                   sangat kecil dan tidak dapat dilihat dengan mata telanjang).
                 </li>
               </ul>
@@ -150,21 +152,21 @@ export default function BatuanMetamorfPage() {
                 Berdasarkan bentuk mineral penyusunnya, tekstur batuan metamorf
                 diklasifikasikan sebagai berikut:
               </p>
-              <ul className="list-disc mx-3">
+              <ul className=" mx-3">
                 <li>
-                  <span className="italic">Lepidoblastik</span> (Mineral
+                  A. <span className="italic">Lepidoblastik</span> (Mineral
                   berbentuk tabular (pipih)).
                 </li>
                 <li>
-                  <span className="italic">Nematoblastik</span> (Mineral
+                  B. <span className="italic">Nematoblastik</span> (Mineral
                   berbentuk prismatik (panjang dan ramping)).
                 </li>
                 <li>
-                  <span className="italic">Granoblastik</span> (Mineral
+                  C. <span className="italic">Granoblastik</span> (Mineral
                   berbentuk granular dan equi-dimensional).{" "}
                 </li>
                 <li>
-                  <span className="italic">Granoblastik</span> (teratur)
+                  D. <span className="italic">Granoblastik</span> (teratur)
                   (Mineral berbentuk <span className="italic">granular</span>,
                   memiliki batas yang lebih teratur, dan umumnya berbentuk
                   <span className="italic">anhedral</span>).{" "}
@@ -173,10 +175,10 @@ export default function BatuanMetamorfPage() {
             </li>
             <li>
               <h2 className="font-bold">Berdasarkan Proses Metamorfisme</h2>
-              <ul className="list-disc mx-3">
+              <ul className=" mx-3">
                 <li>
                   <span className="font-bold">
-                    Batuan Metamorf Kontak{" "}
+                    A. Batuan Metamorf Kontak{" "}
                     <span className="italic">(Thermal)</span>{" "}
                   </span>
                   <p>
@@ -186,12 +188,12 @@ export default function BatuanMetamorfPage() {
                     batuan. Semakin jauh letaknya dari sumber panas, semakin
                     rendah tingkat metamorfosisnya. Contoh batuan metamorf
                     kontak antara lain: Batu kapur (gamping) Batu marmer
-                    Batolit, lakolit, dan sill{" "}
+                    Batolit, lakolit, dan sill (Zikri, 2018).
                   </p>
                 </li>
                 <li>
                   <span className="font-bold">
-                    Batuan Metamorf Dinamo (Tekanan)
+                    B. Batuan Metamorf Dinamo (Tekanan)
                   </span>
                   <p>
                     Batuan metamorf dinamo terbentuk akibat tekanan tinggi dalam
@@ -199,19 +201,19 @@ export default function BatuanMetamorfPage() {
                     akibat pergerakan tektonik. Tekanan ini menyebabkan
                     perubahan struktur mineral, seperti: Batu lumpur Batu tulis
                     (slate) Serpih, Batuan hablur Jenis batuan ini umumnya
-                    ditemukan di daerah patahan dan lipatan.
+                    ditemukan di daerah patahan dan lipatan (Zikri, 2018).
                   </p>
                 </li>
                 <li>
                   <span className="font-bold">
-                    Batuan Metamorf Kontak{" "}
+                    C. Batuan Metamorf Kontak{" "}
                     <span className="italic">Pneumatolitik</span>{" "}
                   </span>
                   <p>
                     Batuan ini mengalami metamorfisme akibat pengaruh gas-gas
                     panas dari magma, yang menyebabkan perubahan komposisi kimia
                     mineral. Contohnya: Kuarsa, gas borium, Turmalin Kuarsa, gas
-                    fluorium, dan Topas{" "}
+                    fluorium, dan Topas (Zikri, 2018).
                   </p>
                 </li>
               </ul>
