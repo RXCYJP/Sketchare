@@ -30,14 +30,12 @@ const models: Record<string, React.FC> = {
   batutulis: BatuTulis,
 };
 const Source: any = {
-  phyllite:
-    "Phyllite sumber ( https://skfb.ly/6QXAT ) (Edurock-Educational Virtual Rock Collection, 2019)",
-  gneiss: "Gneiss sumber ( https://skfb.ly/M7MF ) (Callanbentley, 2016)",
-  marmer:
-    "Marmer sumber ( https://skfb.ly/ptIZY ) (Department Of Geology, University Of Ljubljana, 2023)",
-  kuarsit: "Kuarsit sumber ( https://skfb.ly/ptIzw ) ( Octoraanayaa, 2025)",
-  hornsfell: "Hornfels sumber ( https://skfb.ly/ptJnp ) ( Jens Andersen, 2020)",
-  batutulis: "Batu Tulis sumber ( https://skfb.ly/6SEoK ) (Sara Carena, 2020)",
+  phyllite: "Sumber: (Edurock-Educational Virtual Rock Collection, 2019)",
+  gneiss: "Sumber: (Callanbentley, 2016)",
+  marmer: "Sumber: (Department Of Geology, University Of Ljubljana, 2023)",
+  kuarsit: "Sumber: ( Octoraanayaa, 2025)",
+  hornsfell: "Sumber: ( Jens Andersen, 2020)",
+  batutulis: "Sumber: (Sara Carena, 2020)",
 };
 
 export default function BatuanPage() {

@@ -153,8 +153,8 @@ export default function PengertianPage() {
             allowFullScreen
           ></iframe>
           <p className="text-sm">
-            <span className="font-bold">Sumber vidio youtube</span> (BBGP
-            Provinsi Jawa Timur, 2023)
+            <span className="font-bold">Sumber</span> (BBGP Provinsi Jawa Timur,
+            2023)
           </p>
         </div>
 

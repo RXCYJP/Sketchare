@@ -29,21 +29,15 @@ const models: Record<string, React.FC> = {
   magnesit: Magnesit,
 };
 const Source: any = {
-  breksi: "Breksi sumber ( https://skfb.ly/6RZ8J ) sumber (Sara Carena, 2020)",
-  batubara:
-    "Batubara (Coal) sumber ( https://skfb.ly/6QXyu ) (Edurock-Educational Virtual Rock Collection, 2019)",
-  batupasir:
-    "Batu Pasir sumber (sandstone) ( https://skfb.ly/oSLtH ) sumber (Dwickyalghifari27, 2024,)",
-  batupasirkwarsa:
-    "Batu pasir kuarsa sumber ( https://skfb.ly/oSLtX ) sumber ( Erza28, 2024)",
-  karbonat: "Karbonat sumber ( https://skfb.ly/F8ZC ) (Stein3D, 2014,)",
-  aragonite: "Aragonite sumber ( https://skfb.ly/VSXI ) (Uni Freiburg, 2016)",
-  calcite:
-    "kalsit sumber sumber ( https://skfb.ly/ovzWI ) (Prirodoslovni muzej slovenije, 2022,)",
-  dolomit:
-    "Dolomit (Dolomite) sumber ( https://skfb.ly/ovzVN ) (Prirodoslovni Muzej Slovenije, 2022)",
-  magnesit:
-    "Magnesit (Magnesite) sumber ( https://skfb.ly/ptIZP )  (Museo UV Historia Natural, 2019)",
+  breksi: "Sumber: (Sara Carena, 2020)",
+  batubara: "Sumber: (Edurock-Educational Virtual Rock Collection, 2019)",
+  batupasir: "Sumber: (Dwickyalghifari27, 2024,)",
+  batupasirkwarsa: " Sumber: ( Erza28, 2024)",
+  karbonat: " Sumber: (Stein3D, 2014,)",
+  aragonite: "Sumber: (Uni Freiburg, 2016)",
+  calcite: " Sumber: (Prirodoslovni muzej slovenije, 2022,)",
+  dolomit: "Sumber: (Prirodoslovni Muzej Slovenije, 2022)",
+  magnesit: "Sumber: (Museo UV Historia Natural, 2019)",
 };
 
 export default function BatuanPage() {

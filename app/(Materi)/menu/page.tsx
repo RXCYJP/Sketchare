@@ -62,9 +62,9 @@ export default function MenuPage() {
         <Image
           src={lava}
           alt="vulcano"
-          width={150}
+          width={350}
           height={200}
-          className="drop-shadow-lg absolute -z-30  right-1 "
+          className="drop-shadow-lg absolute -z-30  right-1 bottom-5 "
         />
       </div>
     </div>
