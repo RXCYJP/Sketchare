@@ -38,17 +38,7 @@ export default function MenuPage() {
             Siklus Batuan
           </Button>
         </Link>
-        <div>
-          <iframe
-            className="w-full h-[300px] md:h-[500px] mt-5"
-            src="https://www.youtube.com/embed/7JP9R-OpGqQ?si=3KC0NnCWS2Xo30Gu"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          ></iframe>
-        </div>
+
         <Link href="/jenis-batuan">
           <Button
             type="button"

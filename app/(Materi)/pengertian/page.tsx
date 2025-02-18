@@ -142,6 +142,22 @@ export default function PengertianPage() {
           </ul>
         </div>
 
+        <div>
+          <iframe
+            className="w-full h-[300px] md:h-[500px] mt-5"
+            src="https://www.youtube.com/embed/7JP9R-OpGqQ?si=3KC0NnCWS2Xo30Gu"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          ></iframe>
+          <p className="text-sm">
+            <span className="font-bold">Sumber vidio youtube</span> (BBGP
+            Provinsi Jawa Timur, 2023)
+          </p>
+        </div>
+
         <div className="mt-5 pb-10 items-center flex justify-center flex-col">
           <Link
             href={"/jenis-batuan"}
