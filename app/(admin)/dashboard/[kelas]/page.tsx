@@ -27,14 +27,13 @@ export default function KelasPage() {
     const getData = async () => {
       try {
         const rawData = await retrieveData("user");
-
         // Filter data berdasarkan kelas
         const data: Student[] = rawData
           .map((item: any) => ({
             id: item.id ?? "",
             nama: item.name ?? "Unknown",
             kelas: item.kelas ?? "Unknown",
-            nilai: item.nilai ?? "0",
+            nilai: item.scores?.score ?? "0",
           }))
           .filter((student) => student.kelas === kelas);
 
@@ -89,7 +88,6 @@ export default function KelasPage() {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
-
   return (
     <div className="p-4">
       {/* 🔹 Tombol Ekspor */}
