@@ -1,12 +1,14 @@
 "use client";
-import { retrieveData } from "@/lib/firebase/service";
+import { deleteData, retrieveData } from "@/lib/firebase/service";
 import { useEffect, useState } from "react";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import * as XLSX from "xlsx";
 import { saveAs } from "file-saver";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import "jspdf-autotable";
+import { TbEdit, TbTrash } from "react-icons/tb";
+import Swal from "sweetalert2";
 
 interface Student {
   id: string;
@@ -20,6 +22,33 @@ export default function KelasPage() {
   const [students, setStudents] = useState<Student[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const router = useRouter();
+
+  const handleEdit = async (id: string) => {
+    router.push(`/dashboard/edit/${id}`);
+  };
+
+  const handleDelete = async (id: string) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        await deleteData("user", id, (res: any) => {
+          if (res) {
+            Swal.fire("Deleted!", "Your file has been deleted.", "success");
+          } else {
+            Swal.fire("Failed!", "Your file has not been deleted.", "error");
+          }
+        });
+      }
+    });
+  };
 
   useEffect(() => {
     if (!kelas) return;
@@ -34,6 +63,7 @@ export default function KelasPage() {
             nama: item.name ?? "Unknown",
             kelas: item.kelas ?? "Unknown",
             nilai: item.scores?.score ?? "0",
+            role: item.role ?? "siswa",
           }))
           .filter((student) => student.kelas === kelas);
 
@@ -72,6 +102,7 @@ export default function KelasPage() {
       ["Nama", "Kelas", "Nilai"],
     ];
     const dataArray = students.map((s) => [s.nama, s.kelas, s.nilai ?? "-"]);
+    console.log(students);
 
     const ws = XLSX.utils.aoa_to_sheet([...header, ...dataArray]);
 
@@ -119,6 +150,7 @@ export default function KelasPage() {
                 <th className="p-2">Nama</th>
                 <th className="p-2">Kelas</th>
                 <th className="p-2">Nilai</th>
+                <th className="p-2">Edit</th>
               </tr>
             </thead>
             <tbody>
@@ -129,6 +161,24 @@ export default function KelasPage() {
                     <td className="p-2">{s.nama}</td>
                     <td className="p-2">{s.kelas}</td>
                     <td className="p-2">{s.nilai ?? "Belum ada nilai"}</td>
+                    <td className="p-2">
+                      <div className="flex gap-2 justify-center">
+                        <button
+                          type="button"
+                          onClick={() => handleDelete(s.id)}
+                          className="text-white px-5 bg-red-400 hover:bg-red-700 text-center rounded-md "
+                        >
+                          <TbTrash />
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => handleEdit(s.id)}
+                          className="text-white px-5 bg-cyan-400 hover:bg-cyan-700 text-center rounded-md"
+                        >
+                          <TbEdit />
+                        </button>
+                      </div>
+                    </td>
                   </tr>
                 ))
               ) : (

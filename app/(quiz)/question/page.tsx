@@ -6,6 +6,7 @@ import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 interface Question {
   question: string;
@@ -55,6 +56,11 @@ const QuizPage: React.FC = () => {
         });
       } catch (error) {
         console.log(error);
+        Swal.fire({
+          icon: "error",
+          title: "Error",
+          text: "Update skor gagal",
+        });
       }
     }
   };

@@ -3,6 +3,8 @@ import Accordion from "@/components/accordion";
 import Button from "@/components/button";
 import Input from "@/components/input";
 import Loader from "@/components/loader";
+import Modal from "@/components/modals";
+import Select from "@/components/select";
 import { deleteData, retrieveData } from "@/lib/firebase/service";
 import siswaService from "@/services/siswa/service";
 import { useSession } from "next-auth/react";
@@ -38,7 +40,11 @@ export default function DashboardPage() {
       }
     });
   };
-  console.log({ data: status });
+
+  const handleEdit = async (id: string) => {
+    router.push(`/dashboard/edit/${id}`);
+  };
+
   const onSubmit = (event: any) => {
     event.preventDefault();
 
@@ -46,7 +52,7 @@ export default function DashboardPage() {
     let data = {
       name: form.name.value,
       kelas: form.kelas.value,
-      role: "siswa",
+      role: form.role.value,
       createdAt: new Date(),
       updatedAt: new Date(),
     };
@@ -102,12 +108,21 @@ export default function DashboardPage() {
             Hallo <span>{session?.user?.username || session?.user?.name}</span>
           </h1>
         </div>
+
         <div className="gap-6">
           <Accordion title="Tambahkan Siswa">
             <form action="" className="flex flex-col " onSubmit={onSubmit}>
               <div className="flex flex-col gap-8 px-4">
                 <Input label="Nama" name="name" type="text" />
                 <Input label="kelas" name="kelas" type="text" />
+                <Select
+                  name="role"
+                  label="Role :"
+                  options={[
+                    { value: "siswa", label: "Siswa" },
+                    { value: "admin", label: "Admin" },
+                  ]}
+                />
                 <div className="flex justify-end pt-7">
                   <Button
                     type="submit"
@@ -152,6 +167,7 @@ export default function DashboardPage() {
                           </button>
                           <button
                             type="button"
+                            onClick={() => handleEdit(item.id)}
                             className="text-white px-5 bg-cyan-400 hover:bg-cyan-700 text-center rounded-md"
                           >
                             <TbEdit />

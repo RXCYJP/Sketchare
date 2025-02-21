@@ -65,3 +65,9 @@ export async function PUT(req: NextRequest) {
   const data: any = req.body;
   await updateSiswa("user", data, user).then((res) => console.log(res));
 }
+
+export async function PATCH(req: NextRequest) {
+  const user: any = req.nextUrl.searchParams.get("id");
+  const data: any = req.body;
+  await updateSiswa("user", data, user).then((res) => console.log(res));
+}

@@ -13,6 +13,7 @@ export default function Sidebar() {
     setIsOpen(!isOpen);
   };
   const data = ["XA", "XB", "XC", "XD", "XE", "XF", "XG"];
+
   return (
     <div className="flex">
       <div
@@ -27,6 +28,7 @@ export default function Sidebar() {
               <IoMdMenu />
             </Button>
           </div>
+
           <h3 className="text-2xl font-bold text-left">Kelas :</h3>
           {data.map((item) => (
             <Link
