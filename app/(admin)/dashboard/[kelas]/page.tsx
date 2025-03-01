@@ -78,7 +78,7 @@ export default function KelasPage() {
     getData();
   }, [kelas]);
 
-  // ✅ Ekspor PDF dengan `autoTable`
+  // Ekspor PDF dengan `autoTable`
   const handlePrintPDF = () => {
     const input = document.getElementById("print-section"); // Ambil elemen tabel
     if (!input) return;
@@ -94,7 +94,7 @@ export default function KelasPage() {
     });
   };
 
-  // ✅ Ekspor Excel dengan header rapi & auto-width
+  // Ekspor Excel dengan header rapi & auto-width
   const exportToExcel = () => {
     const wb = XLSX.utils.book_new();
     const header = [
